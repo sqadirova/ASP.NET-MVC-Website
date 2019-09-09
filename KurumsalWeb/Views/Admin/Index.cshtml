@@ -1,0 +1,66 @@
+﻿@model IEnumerable<KurumsalWeb.Models.Model.Kategori>
+@{
+    ViewBag.Title = "Admin Ana Səhifə";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+     
+
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div class="info-box blue-bg">
+                    <i class="fa fa-file-text"></i>
+                    <div class="count">@ViewBag.BlogSay</div>
+                    <div class="title">Blog Yazıları</div>
+                </div>
+                <!--/.info-box-->
+            </div>
+            <!--/.col-->
+
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div class="info-box brown-bg">
+                    <i class="fa fa-comment"></i>
+                    <div class="count">@ViewBag.YorumSay</div>
+                    <div class="title">Şərhlər</div>
+                </div>
+                <!--/.info-box-->
+            </div>
+            <!--/.col-->
+
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div class="info-box dark-bg">
+                    <i class="fa fa-tags"></i>
+
+                    <div class="count">@ViewBag.KategoriSay</div>
+                    <div class="title">Kategoriyalar</div>
+                </div>
+                <!--/.info-box-->
+            </div>
+            <!--/.col-->
+
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div class="info-box green-bg">
+                    <i class="fa fa-cubes" ></i>
+                    <div class="count">@ViewBag.HizmetSay</div>
+                    <div class="title">Xidmətlər</div>
+                </div>
+                <!--/.info-box-->
+            </div>
+            <!--/.col-->
+
+        </div>
+        <!--/.row-->
+
+   @*
+       <div class="text-right">
+        <div class="credits">
+            <!--
+              All the links in the footer should remain intact.
+              You can delete the links only if you purchased the pro version.
+              Licensing information: https://bootstrapmade.com/license/
+              Purchase the pro version form: https://bootstrapmade.com/buy/?theme=NiceAdmin
+            -->
+            Designed by <a href="#">KorporativWeb</a>
+        </div>
+    </div>
+   *@ 

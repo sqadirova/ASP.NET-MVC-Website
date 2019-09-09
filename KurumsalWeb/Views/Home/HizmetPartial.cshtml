@@ -1,0 +1,31 @@
+﻿@model IEnumerable<KurumsalWeb.Models.Model.Hizmet>
+
+@{ 
+    Layout = null;
+}
+
+    <div class="col-lg-12">
+        <h4 class="heading">Xidmətlərimiz</h4>
+        <div class="row">
+            <section id="projects">
+                <ul id="thumbs" class="portfolio">
+                    @foreach (var item in Model)
+                    {
+                        <!-- Item Project and Filter Name -->
+                        <li class="col-lg-3 design" data-id="id-0" data-type="web">
+                            <div class="item-thumbs">
+                                <!-- Fancybox - Gallery Enabled - Title - Full Image -->
+                                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="@item.Baslik" href="@item.ResimURL">
+                                    <span class="overlay-img"></span>
+                                    <span class="overlay-img-thumb font-icon-plus"></span>
+                                </a>
+                                <!-- Thumb Image and Description -->
+                                <img src="@item.ResimURL" alt="@item.Aciklama" width="100" height="100">
+                            </div>
+                        </li>
+                        <!-- End Item Project -->
+                    }
+                </ul>
+            </section>
+        </div>
+    </div>

@@ -1,0 +1,94 @@
+﻿@model IEnumerable<KurumsalWeb.Models.Model.Hizmet>
+    @{
+        ViewBag.Title = "Index";
+        Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    }
+
+    <h2>Xidmətlər</h2>
+
+    <a class="btn btn-default" href="/Hizmet/Create/">Yeni Əlavə et</a>
+    <table class="table table-striped table-responsive">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Başlıq</th>
+                <th>Açıqlama</th>
+                <th>ResimURL</th>
+                <th>Əməliyyatlar</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>@item.HizmetId</td>
+
+                <td>@item.Baslik</td>
+
+                <td>@Html.Raw(item.Aciklama)</td>
+
+                <td><img class="img-responsive" width="100" height="100" src="@item.ResimURL" /></td>
+
+                <td> 
+                    <a href="/Hizmet/Edit/@item.HizmetId">Yenilə</a> |
+                    <a href="/Hizmet/Delete/@item.HizmetId">Sil</a>
+                </td>
+            </tr>
+            }
+
+
+        </tbody>
+    </table>
+
+
+
+@*@model IEnumerable<KurumsalWeb.Models.Model.Hizmet>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<p>
+    @Html.ActionLink("Yeni Əlavə Et", "Create")
+</p>
+<table class="table table-bordered table-striped table-responsive-sm">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Baslik)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aciklama)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ResimURL)
+        </th>
+    
+        <th>
+            Əməliyyatlar
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Baslik)
+            </td>
+
+            <td>
+                @Html.Raw(item.Aciklama)
+            </td>
+            <td>
+                <img class="img-responsive" src="@item.ResimURL" width="200" height="200" />
+            </td>
+         
+            <td>
+                @Html.ActionLink("Yenilə", "Edit", new { id = item.HizmetId })
+            </td>
+        </tr>
+    }
+
+</table>*@
