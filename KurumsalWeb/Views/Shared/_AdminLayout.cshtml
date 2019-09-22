@@ -129,9 +129,15 @@
                         </a>
                         <ul class="dropdown-menu extended logout">
                             <div class="log-arrow-up"></div>
-                            <li>
-                                <a href="/Admin/AdminList/"><i class="icon_profile"></i>Adminlər</a>
-                            </li>
+                            @{
+                                if (Session["yetki"].ToString() == "Admin")
+                                {
+                                    <li>
+                                        <a href="/Admin/AdminList/"><i class="icon_profile"></i>Adminlər</a>
+                                    </li>
+                                }
+                            }
+
                             <li>
                                 <a href="/Admin/Logout/"><i class="icon_key_alt"></i>Çıxış</a>
                             </li>
@@ -155,32 +161,38 @@
                             <span>Admin</span>
                         </a>
                     </li>
-                    <li>
-                        <a class="" href="/Kimlik/Index/">
-                            <i class="icon_desktop"></i>
-                            <span>Sayt Kimlik</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="" href="/Hakkimizda/Index/">
-                            <i class="icon_document_alt"></i>
-                            <span>Hakkımızda</span>
-                        </a>
-                    </li>
+                    @{
+                        if (Session["yetki"].ToString() == "Admin")
+                        {
+                            <li>
+                                <a class="" href="/Kimlik/Index/">
+                                    <i class="icon_desktop"></i>
+                                    <span>Sayt Kimlik</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="" href="/Hakkimizda/Index/">
+                                    <i class="icon_document_alt"></i>
+                                    <span>Hakkımızda</span>
+                                </a>
+                            </li>
 
-                    <li>
-                        <a class="" href="/Slider/Index/">
-                            <i class="icon_document_alt"></i>
-                            <span>Slider</span>
-                        </a>
-                    </li>
+                            <li>
+                                <a class="" href="/Slider/Index/">
+                                    <i class="icon_document_alt"></i>
+                                    <span>Slider</span>
+                                </a>
+                            </li>
 
-                    <li>
-                        <a class="" href="/Iletisim/Index/">
-                            <i class="icon_chat"></i>
-                            <span>Əlaqə</span>
-                        </a>
-                    </li>
+                            <li>
+                                <a class="" href="/Iletisim/Index/">
+                                    <i class="icon_chat"></i>
+                                    <span>Əlaqə</span>
+                                </a>
+                            </li>
+                        }
+                    }
+
                     <li>
                         <a class="" href="/Hizmet/Index/">
                             <i class="icon_table"></i>

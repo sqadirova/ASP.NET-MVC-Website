@@ -27,7 +27,7 @@
     <div class="container">
         <form class="login-form" method="post" action="/Admin/Login/">
             <div class="login-wrap">
-                @if (Session["adminId"]==null)
+                @if (Session["adminId"] == null)
                 {
                     <p class="alert">@ViewBag.Warning</p>
 
@@ -43,6 +43,8 @@
                 </div>
 
                 <button class="btn btn-primary btn-lg btn-block" type="submit">Daxil ol</button>
+                <a href="/Admin/ForGotPassword/" class="btn btn-primary btn-lg btn-block">Şifrəmi Unuttum</a>
+
             </div>
         </form>
     </div>

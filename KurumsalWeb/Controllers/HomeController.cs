@@ -21,6 +21,7 @@ namespace KurumsalWeb.Controllers
         public ActionResult Index()
         {
             ViewBag.Kimlik = db.Kimlik.SingleOrDefault();
+
             // ViewBag.Hizmetler = db.Hizmet.ToList().OrderByDescending(x=>x.HizmetId);
 
             return View();
