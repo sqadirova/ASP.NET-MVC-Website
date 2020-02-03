@@ -11,7 +11,9 @@ namespace KurumsalWeb.Controllers
     public class HakkimizdaController : Controller
     {
         KurumsalDBContext db = new KurumsalDBContext();
+
         // GET: Hakkimizda
+        [Route("AdminHakkimizda")]
         public ActionResult Index()
         {
             var h = db.Hakkimizda.ToList();
